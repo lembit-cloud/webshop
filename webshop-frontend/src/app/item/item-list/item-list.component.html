@@ -1,1 +1,12 @@
 <p>item-list works!</p>
+
+<!-- // {{items | json} -->
+
+<div class="items-wrapper" >
+     <div class="item" *ngFor="let item of items">
+       <img src="{{item.imgSrc}}">
+       <div class="item-title">{{ item.title }}</div>    
+       <div class="item-price">{{ item.price }} €</div> 
+
+   </div>
+</div>

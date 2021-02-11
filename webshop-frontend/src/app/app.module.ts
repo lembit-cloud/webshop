@@ -7,6 +7,8 @@ import { ItemListComponent } from './item/item-list/item-list.component';
 import { ItemViewComponent } from './item/item-view/item-view.component';
 import { ItemAddComponent } from './item/item-add/item-add.component';
 import { ItemEditComponent } from './item/item-edit/item-edit.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ItemEditComponent } from './item/item-edit/item-edit.component';
     ItemListComponent,
     ItemViewComponent,
     ItemAddComponent,
-    ItemEditComponent
+    ItemEditComponent,
+    NotFoundComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
