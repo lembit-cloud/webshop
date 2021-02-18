@@ -1,26 +1,58 @@
 
-.empty-cart-button {
+.item-count { 
+    margin-left: 10%;
 
+}
+
+.empty-cart-button {
+margin-right:0;
+margin-top: -5px;
 float:right;
 color: indigo;
-background: lawngreen;
-border-style: solid;
+background: white;
+border-style: groove;
 padding: 0;
 
 }
 
+.items-wrapper {
+    margin: 0 10%;
+}
+
+.item {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 0 10%;
+    border-bottom: 1px solid lightgrey;
+
+}
+
+.item-title {
+    width: 500px;
+    margin-top: 40px;
+
+}
+
+.item-price {
+    width: 50px;
+    margin-top: 40px;
+}
+
 .delete-from-cart-button {
-cursor: pointer;
-border-style: none;
-background-color: rgb(20, 195, 248);
-border-radius: 5px;
-opacity: 0.7;
+    height: 40px;
+    width: 40px;
+    margin-top: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 5px;
+    opacity: 0.7;
 
 }
 
 .delete-from-cart-button:hover {
 
     opacity: 1.0;
-    transition: .5s;
-    
+    transition: .5s;    
     }

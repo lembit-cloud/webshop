@@ -1,11 +1,17 @@
 <!-- // {{items | json} -->
 
+
+<div>Ostukorvis on {{ itemsInCart.length }} eset</div>
 <div (click)="onEmptyCart()" class="empty-cart-button">Tühjenda ostukorv</div>
+<br><br>
+
 <div class="items-wrapper" >
-     <div class="item" *ngFor="let item of itemsInCart; let i = index">
+    <div class="item" *ngFor="let item of itemsInCart; let i = index">
        <img src="{{item.imgSrc}}">
        <div class="item-title">{{ item.title }}</div>    
-       <div class="item-price">{{ item.price }} €</div> 
-       <button (click)="onDeleteFromCart(i)" class= "delete-from-cart-button">x</button>
+       <div class="item-price">{{ item.price }} €</div>   
+       <img (click)="onDeleteFromCart(i)" class= "delete-from-cart-button" src="assets\bin.png" alt="">    
+    </div>
+</div>
 
-
+<div>{{sumOfCart}}</div>
