@@ -9,6 +9,8 @@ import { ItemAddComponent } from './item/item-add/item-add.component';
 import { ItemEditComponent } from './item/item-edit/item-edit.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CartComponent } from './cart/cart.component';
+import { NavbarComponent } from './global/navbar/navbar.component';
+import { FooterComponent } from './global/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CartComponent } from './cart/cart.component';
     ItemAddComponent,
     ItemEditComponent,
     NotFoundComponent,
-    CartComponent
+    CartComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 <!-- // {{items | json} -->
 
-
+<div *ngIf="itemsInCart.length > 0">
 <div>Ostukorvis on {{ itemsInCart.length }} eset</div>
 <div (click)="onEmptyCart()" class="empty-cart-button">Tühjenda ostukorv</div>
 <br><br>
@@ -14,4 +14,9 @@
     </div>
 </div>
 
-<div>{{sumOfCart}}</div>
+<div class="sum-of-cart">{{sumOfCart.toFixed(2)}} € </div>
+</div>
+
+<div class="empty-cart" *ngIf="itemsInCart.length == 0">
+    <img src="assets/sad.png">
+</div>

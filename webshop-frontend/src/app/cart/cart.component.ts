@@ -16,28 +16,18 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.itemsInCart = this.cartService.getItemsFromCart();
-    this.calculateSumOfCart();
+    this.sumOfCart = this.cartService.calculateSumOfCart();
   }
 
 onEmptyCart() {
 this.cartService.emptyCart();
 this.itemsInCart = this.cartService.getItemsFromCart();
-this.calculateSumOfCart();
+this.sumOfCart = this.cartService.calculateSumOfCart();
 }
 
 onDeleteFromCart(i: number) {
 this.cartService.deleteFromCart(i);
 this.itemsInCart = this.cartService.getItemsFromCart();
-this.calculateSumOfCart();
+this.sumOfCart = this.cartService.calculateSumOfCart();
   }
-
-  calculateSumOfCart() {
-    this.sumOfCart = 0;
-    this.itemsInCart.forEach(element => {
-      this.sumOfCart += (Number)(element.price);
-    });
-    this.sumOfCart = (Number)(this.sumOfCart.toFixed(2));
-  
-  }
-
 }
