@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Item } from './item.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,14 @@ export class ItemService {
   constructor() { }
     getItems() {
       return this.items;
-  }
+      }
+
+    deleteItem(i: number) {
+      this.items.splice(i, 1);
+    }
+
+    addNewItem(item: Item) {
+      this.items.push(item);
+    }
 
 }

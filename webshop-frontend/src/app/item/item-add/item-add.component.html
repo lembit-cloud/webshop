@@ -1,1 +1,13 @@
+<button class="main-button back" routerLink="/admin">Tagasi</button>
 
+<form (ngSubmit)="onSubmit(itemAddForm)" #itemAddForm="ngForm">
+    <label>Nimetus</label><br>
+    <input type="text" name="title" ngModel required><br><br>
+    <label>Hind</label><br>
+    <input type="text" name="price" ngModel required><br><br>
+    <label>Pilt</label><br>
+    <input type="text" name="imgSrc" ngModel required><br><br>
+    <label>Kategooria</label><br>
+    <input type="text" name="category" ngModel required><br><br>
+    <button [disabled]="itemAddForm.invalid" class="main-button add">Sisesta</button>
+</form>

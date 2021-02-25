@@ -10,3 +10,27 @@ body {
     font-family: 'Roboto', sans-serif;
     outline: none;
 }
+
+
+.main-button {
+ 
+    position: relative;
+    /* margin: 0px; */
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(90, 126, 243);
+    color: white;
+    font-size: 20px;
+}
+
+.back {
+    height: 50px;
+    width: 150px;
+    top: -60px;
+    margin-left: -60px;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red !important;
+}

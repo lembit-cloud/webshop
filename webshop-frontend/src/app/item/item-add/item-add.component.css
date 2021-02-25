@@ -1,0 +1,30 @@
+
+input[type=text]{
+    width: 60%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px
+}
+
+form { 
+    position: relative;
+    top: -100px;
+    text-align: center;
+}
+
+.add {
+    margin: auto;
+    width: 100px;
+    height: 40px;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+}
+
+.add:disabled {
+    background-color: lightgrey;
+    cursor: initial;
+}

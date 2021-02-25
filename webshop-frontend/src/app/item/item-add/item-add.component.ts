@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { ItemService } from '../item.service';
 
 @Component({
   selector: 'app-item-add',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemAddComponent implements OnInit {
 
-  constructor() { }
+  constructor( private itemService: ItemService) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(form: NgForm) {
+    this.itemService.addNewItem(form.value);
+    console.log(form);
   }
 
 }

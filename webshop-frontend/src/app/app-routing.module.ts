@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemAddComponent } from './item/item-add/item-add.component';
 import { ItemEditComponent } from './item/item-edit/item-edit.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
 //only routes
 { path: "", redirectTo: "home", pathMatch: "full"},
 { path: "home", component: ItemListComponent},
+{ path: "admin", component: AdminComponent},
 { path: "item/edit", component: ItemEditComponent},
 { path: "item/view", component: ItemViewComponent},
 { path: "item/add", component: ItemAddComponent},
