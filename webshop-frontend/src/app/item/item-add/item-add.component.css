@@ -9,6 +9,7 @@ input[type=text]{
 
 form { 
     position: relative;
+    margin-left: 100px;
     top: -100px;
     text-align: center;
 }

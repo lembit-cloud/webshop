@@ -9,7 +9,7 @@
     
     .item {
     margin-left: -65px;
-    width:90%;
+    width: 90%;
     height:70px;
     border: 1px solid black;
     padding: 10px;
@@ -30,13 +30,13 @@
     .change {
         height: 50px;
         width: 150px;
-        left: 700px;
+        left: 850px;
         top: -55px;              
         }
 
     .delete {
             height: 50px;
             width: 150px;
-            left: 720px;
+            left: 900px;
             top: -55px;              
         }
