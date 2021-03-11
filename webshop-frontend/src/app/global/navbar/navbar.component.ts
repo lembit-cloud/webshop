@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { CartService } from 'src/app/cart/cart.service';
 
 @Component({
@@ -10,7 +11,8 @@ export class NavbarComponent implements OnInit {
 
   cartTotal = 0;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService,
+    private translate: TranslateService) { }
 
   ngOnInit(): void {
     this.cartService.cartChangeed.subscribe(cartItems => {
@@ -18,4 +20,9 @@ export class NavbarComponent implements OnInit {
       console.log(cartItems);
     });
   }
+
+  useLanguage(language: string): void {
+    this.translate.use(language);
+}
+
 }

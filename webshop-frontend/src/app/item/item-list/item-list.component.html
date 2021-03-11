@@ -1,11 +1,17 @@
 
 <!-- // {{items | json} -->
 
+<div class="filter-bar">
+    <div class= "filter-name">Järjesta:</div>
+    <div (click)= "onSortPrice()" class= "filter-value price">Hinna alusel</div>
+    <div (click)= "onSortTitle()"  class= "filter-value title">Tähestiku alusel</div>
+</div>
+
 <div class="items-wrapper" >
      <div class="item" *ngFor="let item of items">
       <img src="{{item.imgSrc}}">
        <div (click)="onAddToCart(item)" class ="add-to-cart-button">Lisa ostukorvi</div>
        <div class="item-title">{{ item.title }}</div>    
-       <div class="item-price">{{ item.price }} €</div>
+       <div class="item-price">{{ item.price | number: '', 'en' }} €</div>
    </div>
 </div>

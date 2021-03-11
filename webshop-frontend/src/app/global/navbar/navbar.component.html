@@ -1,10 +1,17 @@
 
 <div class= "page">
     <div class="navbar">
-        <img routerLink="/" src="assets\webshio.png">
+        <img  class="logo" routerLink="/" src="assets\webshio.png">
+        <!-- <button (click)="useLanguage('en')">en</button>
+        <button (click)="useLanguage('ee')">ee</button> --> 
+        <div>
+            <img class="lang-1" (click)="useLanguage('ee')" src="assets/i18n/ee.png" >
+            <img class="lang-2" (click)="useLanguage('en')" src="assets/i18n/en.png" >
+        </div>                      
     <div class="cart-box" routerLink="cart">
         <img src="assets\shopping-cart.png">
         <span> {{cartTotal.toFixed(2)}} €</span>
+        
     </div>
     
 </div>

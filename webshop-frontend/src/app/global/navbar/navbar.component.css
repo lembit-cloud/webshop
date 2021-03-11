@@ -10,11 +10,25 @@
     box-shadow: 0 0 100px 0 rgb(233, 233, 233);
 }
 
-.navbar img {
-   
-    height: 105px;
-    margin-top: -30px;
+.navbar .logo {
+    height: 125px;
+    margin-top: -25px;
     cursor: pointer;
+}
+
+.lang-1, .lang-2 {    
+    height: 35px;        
+    top: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.lang-1 {
+    right: 170px;
+}
+
+.lang-2 {
+    right: 220px;
 }
 
 .cart-box {
