@@ -14,14 +14,18 @@ export class ItemViewComponent implements OnInit {
   constructor(private itemService: ItemService) { }
 
   ngOnInit(): void {
+    this.itemService.getItems().subscribe(responce => {      
+      this.items = responce;    
+ });
+}
 
-    this.items = this.itemService.getItems();
-  }
-
-onAdminDelete(i: number) {
+onAdminDelete(item: Item, i:number) {
   let isDeleteConfirm = confirm("Oled kindel, et soovid toodet jäädavalt kustutada?");
   if (isDeleteConfirm) {
-    this.itemService.deleteItem(i);
+    if(item.id) {
+    this.itemService.deleteItem(item.id).subscribe();
+    this.items.splice(i,1);
+   }
   }
  }
 }

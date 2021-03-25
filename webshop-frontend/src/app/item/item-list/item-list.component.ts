@@ -10,6 +10,7 @@ import { ItemService } from '../item.service';
 })
 export class ItemListComponent implements OnInit {
   items: Item[] = [];
+  itemsOriginal: Item[] = [];
   sortPriceNumber = 0;
   sortTitleNumber = 0;
 
@@ -17,9 +18,12 @@ export class ItemListComponent implements OnInit {
     private itemService: ItemService) { }
 
   ngOnInit(): void {
+    this.itemService.getItems().subscribe(responce => {      
+       this.itemsOriginal = responce;
+       this.items = this.itemsOriginal.slice();
+  });
 
-    this.items = this.itemService.getItems();
-  }
+}
 
   onSortPrice() {
     if (this.sortPriceNumber == 0) {
@@ -29,7 +33,7 @@ export class ItemListComponent implements OnInit {
     this.items.sort((a, b) => Number(b.price) - Number(a.price));
     this.sortPriceNumber =2;
   } else {
-    this.items = this.itemService.getItems();
+    this.items = this.itemsOriginal.slice();
     this.sortPriceNumber = 0;
   }
 }
@@ -42,7 +46,7 @@ export class ItemListComponent implements OnInit {
       this.items.sort((a, b) => b.title.localeCompare(a.title));
       this.sortTitleNumber =2;
     } else {
-      this.items = this.itemService.getItems();
+      this.items = this.itemsOriginal.slice();
       this.sortTitleNumber = 0;
     }
   }

@@ -21,11 +21,12 @@ export class ItemAddComponent implements OnInit {
     if (form.valid) {
       const formValue = form.value
       const item = new Item(
+        null,
         formValue.imgSrc,
         formValue.title,
         formValue.price,
         formValue.category);
-    this.itemService.addNewItem(item);
+    this.itemService.addNewItem(item).subscribe();
     this.router.navigateByUrl("/item/view")
   }
     console.log(form);

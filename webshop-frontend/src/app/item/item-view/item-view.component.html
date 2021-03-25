@@ -2,9 +2,9 @@
 
 <div class="items-wrapper" >
     <div class="item" *ngFor="let item of items; let i = index">
-      <div class="item-title">{{ item.title }}</div>    
-      <div class="item-price">{{ item.price }} €</div>
-      <button class="main-button change" [routerLink]="['/item/edit', i]">Muuda toodet</button>
-      <button (click)="onAdminDelete(i)" class="main-button delete">Kustuta toode</button>
+      <div class="item-title">{{ item.title }}</div>
+      <div class="item-price">{{ item.price.toFixed(2) }} €</div>
+      <button class="main-button change" [routerLink]="['/item/edit', item.id]">Muuda toodet</button>
+      <button (click)="onAdminDelete(item, i)" class="main-button delete">Kustuta toode</button>
   </div>
 </div>

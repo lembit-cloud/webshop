@@ -1,10 +1,11 @@
 <button class="main-button back" routerLink="/admin">{{ 'Tagasi' | translate }}</button>
 
-<form (ngSubmit)="onSubmit(itemEditForm)" [formGroup]="itemEditForm">
+<form *ngIf="itemEditForm" (ngSubmit)="onSubmit(itemEditForm)" [formGroup]="itemEditForm">
+    <input hidden type="number" formControlName="id" required><br><br>
     <label>Nimetus</label><br>
     <input type="text" formControlName="title" required><br><br>
     <label>Hind</label><br>
-    <input type="text" formControlName="price" required><br><br>
+    <input type="number" formControlName="price" required><br><br>
     <label>Pilt</label><br>
     <input type="text" formControlName="imgSrc" required><br><br>
     <label>Kategooria</label><br>

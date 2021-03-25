@@ -1,0 +1,57 @@
+https://identity.getpostman.com/browser-auth/success
+
+<head>
+
+
+{"title":"Ese",
+"price":10,
+"imgSrc":"www.google.com",
+"category":"veebisait"
+}
+
+kui localhost:8080/item-delete/3, panna  ,muudab ära
+
+https://www.baeldung.com/spring-boot-h2-database
+
+DELETE TABLE IF EXISTS item;
+
+CREATE TABLE item (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  title VARCHAR(250) NOT NULL,
+  price VARCHAR(250) NOT NULL,
+  category VARCHAR(250) NOT NULL,
+  img_src VARCHAR(250) DEFAULT NULL
+);
+
+
+spring.datasource.url=jdbc:h2:file:C:/Users/User/lembit/webshop-backend/h2/data
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.h2.console.enabled=true
+
+---------------------------------- postgre 
+
+DROP TABLE IF EXISTS item;
+
+CREATE TABLE item (
+  id serial PRIMARY KEY,
+  title VARCHAR(250) NOT NULL,
+  price VARCHAR(250) NOT NULL,
+  category VARCHAR(250) NOT NULL,
+  img_src VARCHAR(250) DEFAULT NULL
+);
+
+
+
+
+https://www.cockroachlabs.com/db
+
+localhost:8080/item-add
+
+{
+"title": "Car",
+"price": 10000,
+"img_src": "www.google.com",
+"category": "veebisait"
+}
