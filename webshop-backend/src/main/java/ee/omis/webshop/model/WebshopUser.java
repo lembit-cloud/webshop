@@ -13,14 +13,16 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Item {
+
+public class WebshopUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String title;
-    private String imgSrc;
-    private double price;
-    private String category;
-
+    private String email;
+    private String password;
+    private String firstName;
+    private String lastName;
+    private String personalCode;
+    private String phone;
 
 }

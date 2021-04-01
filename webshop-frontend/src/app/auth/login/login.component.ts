@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
           this.error = "Parool on vale";          
         } else if (user.email == email && user.password == password) {
           sessionStorage.setItem("email", user.email);
+          this.authService.authChanged.next(true);
           this.router.navigateByUrl("/admin");
         }
       })

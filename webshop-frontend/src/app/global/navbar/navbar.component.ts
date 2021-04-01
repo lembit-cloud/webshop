@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { AuthService } from 'src/app/auth/auth.service';
 import { CartService } from 'src/app/cart/cart.service';
 
 @Component({
@@ -14,13 +15,19 @@ export class NavbarComponent implements OnInit {
 
   constructor(private cartService: CartService,
     private translate: TranslateService,
-    private router: Router) { }
+    private router: Router,
+    private authService: AuthService) { }
 
   ngOnInit(): void {
+    this.authService.authChanged.subscribe(loggedIn => 
+      this.isLoggedIn = loggedIn);
     this.isLoggedIn = sessionStorage.getItem("email") ? true : false;
- 
-   //
 
+    // if (sessionStorage.getItem("email") != undefined) {
+    //  thisisLoggedIn = true;      
+    // } else {
+    //  this.LoggedIn = false;
+    // }
 
     this.cartService.cartChangeed.subscribe(cartItems => {
       this.cartTotal = this.cartService.calculateSumOfCart();   
@@ -34,7 +41,7 @@ export class NavbarComponent implements OnInit {
 
 onLogout() {
   sessionStorage.removeItem("email");
+  this.authService.authChanged.next(false);
   this.router.navigateByUrl("/");
-}
-
+  }
 }

@@ -18,6 +18,8 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { CategoryAddComponent } from './category/category-add/category-add.component';
+import { CategoryViewComponent } from './category/category-view/category-view.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -36,7 +38,9 @@ export function createTranslateLoader(http: HttpClient) {
     FooterComponent,
     AdminComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    CategoryAddComponent,
+    CategoryViewComponent
   ],
   imports: [
     BrowserModule,
