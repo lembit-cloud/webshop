@@ -24,6 +24,11 @@ body {
     font-size: 20px;
 }
 
+.main-button:disabled {
+    opacity: 0.3;
+    cursor:default;
+}
+
 .back {
     height: 50px;
     width: 150px;

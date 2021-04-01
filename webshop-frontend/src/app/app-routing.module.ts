@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemAddComponent } from './item/item-add/item-add.component';
 import { ItemEditComponent } from './item/item-edit/item-edit.component';
@@ -11,6 +13,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
 //only routes
 { path: "", redirectTo: "home", pathMatch: "full"},
+{ path: "login", component: LoginComponent},
+{ path: "signup", component: SignupComponent},
 { path: "home", component: ItemListComponent},
 { path: "admin", component: AdminComponent},
 { path: "item/edit/:itemId", component: ItemEditComponent},

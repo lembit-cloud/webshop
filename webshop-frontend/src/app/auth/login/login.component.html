@@ -1,0 +1,10 @@
+{{error}}
+<br>
+
+<form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+    <label>Email</label><br>
+    <input type="text" name="email" ngModel required><br><br>
+    <label>Parool</label><br>
+    <input type="password" name="password" ngModel required><br><br>
+    <button [disabled]="loginForm.invalid" class="main-button add">Sisesta</button>
+</form>

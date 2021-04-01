@@ -16,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -32,7 +34,9 @@ export function createTranslateLoader(http: HttpClient) {
     CartComponent,
     NavbarComponent,
     FooterComponent,
-    AdminComponent
+    AdminComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

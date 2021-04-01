@@ -1,0 +1,7 @@
+<form (ngSubmit)="onSubmit(signupForm)" #signupForm="ngForm">
+    <label>Email</label><br>
+    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" ngModel required><br><br>
+    <label>Parool</label><br>
+    <input type="password" minlenght = "8" name="password" ngModel required><br><br>
+    <button [disabled]="signupForm.invalid" class="main-button add">{{'Sisesta' | translate}}</button>
+</form>
