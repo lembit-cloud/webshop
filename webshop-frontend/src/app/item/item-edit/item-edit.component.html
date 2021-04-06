@@ -1,4 +1,4 @@
-<button class="main-button back" routerLink="/admin">{{ 'Tagasi' | translate }}</button>
+<button class="main-button back" routerLink="/item/view">{{ 'Tagasi' | translate }}</button>
 
 <form *ngIf="itemEditForm" (ngSubmit)="onSubmit(itemEditForm)" [formGroup]="itemEditForm">
     <input hidden type="number" formControlName="id" required><br><br>
@@ -9,6 +9,10 @@
     <label>Pilt</label><br>
     <input type="text" formControlName="imgSrc" required><br><br>
     <label>Kategooria</label><br>
-    <input type="text" formControlName="category" required><br><br>
-    <button [disabled]="itemEditForm.invalid" class="main-button add">Sisesta</button>
+    <!-- <input type="text" formControlName="category" required><br><br> -->
+    <select formControlName="category">
+        <option value="" disabled selected>Vali kategooria</option>
+        <option *ngFor="let category of categories" [selected]="itemEditForm.value.category == category.name" [value]="category.name">{{ category.name }} </option>
+    </select><br><br>
+    <button [disabled]="itemEditForm.invalid" class="main-button add">{{'Sisesta' | translate}}</button>
 </form>

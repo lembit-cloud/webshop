@@ -11,7 +11,7 @@ import { CartService } from 'src/app/cart/cart.service';
 })
 export class NavbarComponent implements OnInit {
   cartTotal = 0;
-  isLoggedIn = false;
+  isLoggedIn = true;
 
   constructor(private cartService: CartService,
     private translate: TranslateService,

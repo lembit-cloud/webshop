@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ToastService, AngularToastifyModule } from 'angular-toastify';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,6 +48,7 @@ export function createTranslateLoader(http: HttpClient) {
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularToastifyModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -56,7 +58,7 @@ export function createTranslateLoader(http: HttpClient) {
         } 
       })   
   ],
-  providers: [],
+  providers: [ToastService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

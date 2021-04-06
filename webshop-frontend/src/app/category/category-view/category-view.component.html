@@ -1,3 +1,7 @@
-<div *ngFor="let category of categories">
-    {{category.name}}
+<button class="main-button back" routerLink="/admin">{{ 'Tagasi' | translate }}</button>
+<br>
+<button class="main-button change" routerLink="/category/add">Lisa kategooria</button>
+<br>
+<div *ngFor="let category of categories; let i= index">
+    {{category.name}} <button (click)="onDeleteCategory(i)">X</button>
 </div>

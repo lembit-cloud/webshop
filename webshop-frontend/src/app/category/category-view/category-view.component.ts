@@ -16,6 +16,13 @@ export class CategoryViewComponent implements OnInit {
       this.categories = categoriesFromBack 
     //  console.log(categoriesFromBack)
       
-      ); 
+    ); 
   }
+
+  onDeleteCategory(i: number) {
+    this.categoryService.deleteCategory(i).subscribe( () =>
+      this.categories.splice(i,1)
+    );
+  }
+
 }

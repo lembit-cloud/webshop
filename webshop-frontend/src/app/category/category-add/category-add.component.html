@@ -1,1 +1,18 @@
-<p>category-add works!</p>
+<form (ngSubmit)="onSubmit(addCategoryForm)" #addCategoryForm="ngForm">
+    <label>Kategooria</label><br>
+    <input type="text" ngModel name="category"><br>
+    <button type="submit">Sisesta</button>
+</form>
+
+<lib-toastify-toast-container 
+[position]="'bottom-right'"
+[transition]="'bounce'"
+[autoClose]="3000"
+[hideProgressBar]="false"
+[newestOnTop]="false"
+[closeOnClick]="true"
+[pauseOnHover]="true"
+[pauseOnVisibilityChange]="true"
+[iconLibrary]="'none'"
+
+></lib-toastify-toast-container>
