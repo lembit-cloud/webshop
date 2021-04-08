@@ -10,7 +10,10 @@
 <div class="items-wrapper" >
      <div class="item" *ngFor="let item of items">
       <img src="{{item.imgSrc}}">
-       <div (click)="onAddToCart(item)" class ="add-to-cart-button">Lisa ostukorvi</div>
+       <div class ="add-to-cart-button">           
+           <img (click)="onRemoveFromCart(item)" src="assets\minus.svg">       
+           <img (click)="onAddToCart(item)" src="assets\plus.svg">
+    </div>
        <div class="item-title">{{ item.title }}</div>    
        <div class="item-price">{{item.price.toFixed(2) }} €</div>
    </div>

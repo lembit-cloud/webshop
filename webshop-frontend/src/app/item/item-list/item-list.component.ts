@@ -48,11 +48,15 @@ export class ItemListComponent implements OnInit {
     } else {
       this.items = this.itemsOriginal.slice();
       this.sortTitleNumber = 0;
-    }
+    }    
+  }
+
+  onRemoveFromCart(item: Item) {
+    this.cartService.deleteFromCartFromHome(item);
+    // console.log("töötab");
   }
 
 onAddToCart(item: Item) {
-
   this.cartService.addToCart(item);
 
   console.log("töötab");

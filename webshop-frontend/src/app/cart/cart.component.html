@@ -1,15 +1,21 @@
 <!-- // {{items | json} -->
 
 <div *ngIf="itemsInCart.length > 0">
-<div>Ostukorvis on {{ itemsInCart.length }} eset</div>
+<div>Ostukorvis on {{ countOfCart }} eset</div>
 <div (click)="onEmptyCart()" class="empty-cart-button">Tühjenda ostukorv</div>
 <br><br>
 
 <div class="items-wrapper" >
     <div class="item" *ngFor="let item of itemsInCart; let i = index">
-       <img src="{{item.imgSrc}}">
-       <div class="item-title">{{ item.title }}</div>    
-       <div class="item-price">{{ item.price }} €</div>   
+       <img src="{{item.cartItem.imgSrc}}">
+       <div class="item-title">{{ item.cartItem.title }}</div>    
+       <div class="item-price">{{ item.cartItem.price }} €</div>
+       <div class ="add-to-cart-button">           
+        <img (click)="onRemoveFromCart(item.cartItem)" src="assets\minus.svg">       
+        <img (click)="onAddToCart(item.cartItem)" src="assets\plus.svg">
+ </div>
+       <div class="item-price">{{ item.count }} tk</div> 
+       <div class="item-price">{{ item.cartItem.price *item.count }} €</div>  
        <img (click)="onDeleteFromCart(i)" class= "delete-from-cart-button" src="assets\bin.png" alt="">    
     </div>
 </div>

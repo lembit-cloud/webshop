@@ -69,3 +69,10 @@ padding: 0;
         margin: auto;
         /* text-align: center; */
     }
+
+    .add-to-cart-button img {
+
+        width: 30px;
+        height: 30px;
+        margin: 10px;    
+    }

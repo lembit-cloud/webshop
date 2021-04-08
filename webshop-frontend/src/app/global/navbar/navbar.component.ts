@@ -29,7 +29,7 @@ export class NavbarComponent implements OnInit {
     //  this.LoggedIn = false;
     // }
 
-    this.cartService.cartChangeed.subscribe(cartItems => {
+    this.cartService.cartChanged.subscribe(cartItems => {
       this.cartTotal = this.cartService.calculateSumOfCart();   
       console.log(cartItems);
     });
