@@ -19,7 +19,7 @@ public class CategoryController {
 
     @GetMapping("/category-list")
     public List<Category> getCategorys() {
-        return categoryService.getCategorys();
+        return categoryService.getCategories();
     }
 
     @PostMapping("/category-add")

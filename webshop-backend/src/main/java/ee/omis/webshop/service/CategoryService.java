@@ -16,7 +16,7 @@ public class CategoryService {
 
     @Autowired
     private final CategoryRepository categoryRepository;
-    public List<Category> getCategorys() {
+    public List<Category> getCategories() {
         return categoryRepository.findAll();
     }
     public void saveCategory(Category category) {
